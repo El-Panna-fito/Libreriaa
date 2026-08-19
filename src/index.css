@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-bordeaux: #5A0B0B;
+  --color-crimson: #8B0000;
+  --color-neon-red: #ff3131;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-black text-gray-200 selection:bg-crimson/30;
+  }
+}
+
+.glass {
+  @apply bg-black/40 backdrop-blur-md border border-red-900/30;
+}
+
+.glass-pill {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10;
+}
+
+.neon-glow {
+  box-shadow: 0 0 20px rgba(139, 0, 0, 0.4);
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-br from-white via-white to-crimson;
+}
+
+.card-gradient {
+  @apply bg-gradient-to-br from-red-900/10 to-black/40;
+}
